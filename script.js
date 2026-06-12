@@ -31,3 +31,24 @@ document.addEventListener("keydown", function (event) {
     modal.classList.remove("show");
   }
 });
+
+const pixelHeartsContainer = document.getElementById("pixelHearts");
+
+function createPixelHeart() {
+  const heart = document.createElement("div");
+  const pixels = document.createElement("span");
+
+  heart.classList.add("pixel-heart");
+  heart.appendChild(pixels);
+
+  heart.style.left = Math.random() * 95 + "vw";
+  heart.style.top = Math.random() * 90 + "vh";
+  heart.style.animationDelay = Math.random() * 5 + "s";
+  heart.style.transform = `scale(${0.45 + Math.random() * 0.8})`;
+
+  pixelHeartsContainer.appendChild(heart);
+}
+
+for (let i = 0; i < 18; i++) {
+  createPixelHeart();
+}
