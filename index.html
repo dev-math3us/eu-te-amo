@@ -1,104 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Para o Amor da Minha Vida ❤️</title>
-
-<style>
-body{
-    margin:0;
-    padding:0;
-    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
-    font-family:Arial,sans-serif;
-    color:white;
-    text-align:center;
-}
-
-.container{
-    max-width:800px;
-    margin:auto;
-    padding:30px;
-}
-
-h1{
-    font-size:3rem;
-    margin-top:50px;
-}
-
-.card{
-    background:rgba(255,255,255,0.15);
-    backdrop-filter:blur(10px);
-    border-radius:20px;
-    padding:20px;
-    margin:20px 0;
-}
-
-img{
-    width:100%;
-    border-radius:15px;
-    margin-top:15px;
-}
-
-.counter{
-    font-size:2rem;
-    margin-top:20px;
-    font-weight:bold;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eu te amo</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<div class="container">
+  <main class="page">
+    <section class="hero" id="hero">
+      <div class="heart">❤️</div>
+      <span class="tag">uma surpresa só sua</span>
 
-<h1>❤️ Eu te amo ❤️</h1>
+      <h1>Tenho uma coisa pra te mostrar...</h1>
 
-<div class="card">
-    <h2>Uma pequena surpresa para você</h2>
+      <p>
+        Não é um presente caro, nem algo gigante.
+        É só um pedacinho do que eu sinto, feito do meu jeitinho.
+      </p>
 
-    <p>
-        Eu poderia comprar alguma coisa,
-        mas achei mais legal criar algo com minhas próprias mãos.
-    </p>
+      <button id="openLetter" class="main-button">Abrir minha carta</button>
+    </section>
 
-    <p>
-        Obrigado por todos os momentos,
-        pelas risadas, pelas conversas e por fazer parte da minha vida.
-    </p>
+    <section class="letter hidden" id="letter">
+      <h2>Pra você</h2>
 
-    <p>
-        Te amo muito ❤️
-    </p>
-</div>
+      <p>
+        Eu queria conseguir explicar com perfeição tudo que você significa pra mim,
+        mas acho que algumas coisas são grandes demais pra caber certinho em palavras.
+      </p>
 
-<div class="card">
-    <h2>Nosso tempo juntos ⏳</h2>
-    <div class="counter" id="contador"></div>
-</div>
+      <p>
+        Mesmo assim, eu fiz isso aqui porque queria que você tivesse algo só seu.
+        Uma lembrança simples, mas feita com carinho, pensando em você.
+      </p>
 
-</div>
+      <p>
+        Você faz meus dias ficarem mais leves, minhas risadas terem mais sentido
+        e minha vida parecer um lugar melhor de se estar.
+      </p>
 
-<script>
+      <div class="quote">
+        “Eu não preciso de uma foto nossa aqui pra lembrar do quanto você é importante.
+        Algumas coisas ficam guardadas de um jeito que imagem nenhuma explica.”
+      </div>
 
-const dataInicio = new Date("2024-01-01");
+      <button id="openModal" class="love-button">Clica aqui ❤️</button>
+    </section>
+  </main>
 
-function atualizarContador(){
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button id="closeModal" class="close-button">×</button>
 
-    const agora = new Date();
+      <span class="modal-heart">❤️</span>
 
-    const diferenca = agora - dataInicio;
+      <h2>Eu te amo muito</h2>
 
-    const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+      <p>
+        Eu te escolheria de novo, nos dias fáceis, nos dias confusos,
+        nas conversas bobas e em todos os pequenos momentos que fazem a gente ser a gente.
+      </p>
 
-    document.getElementById("contador").innerHTML =
-        dias + " dias ❤️";
-}
+      <p>
+        Obrigado por existir na minha vida.
+      </p>
+    </div>
+  </div>
 
-atualizarContador();
-setInterval(atualizarContador,1000);
-
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
