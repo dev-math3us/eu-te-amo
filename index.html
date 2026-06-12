@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para o Amor da Minha Vida ❤️</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+    font-family:Arial,sans-serif;
+    color:white;
+    text-align:center;
+}
+
+.container{
+    max-width:800px;
+    margin:auto;
+    padding:30px;
+}
+
+h1{
+    font-size:3rem;
+    margin-top:50px;
+}
+
+.card{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:20px;
+    margin:20px 0;
+}
+
+img{
+    width:100%;
+    border-radius:15px;
+    margin-top:15px;
+}
+
+.counter{
+    font-size:2rem;
+    margin-top:20px;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>❤️ Eu te amo ❤️</h1>
+
+<div class="card">
+    <h2>Uma pequena surpresa para você</h2>
+
+    <p>
+        Eu poderia comprar alguma coisa,
+        mas achei mais legal criar algo com minhas próprias mãos.
+    </p>
+
+    <p>
+        Obrigado por todos os momentos,
+        pelas risadas, pelas conversas e por fazer parte da minha vida.
+    </p>
+
+    <p>
+        Te amo muito ❤️
+    </p>
+</div>
+
+<div class="card">
+    <h2>Nosso tempo juntos ⏳</h2>
+    <div class="counter" id="contador"></div>
+</div>
+
+</div>
+
+<script>
+
+const dataInicio = new Date("2024-01-01");
+
+function atualizarContador(){
+
+    const agora = new Date();
+
+    const diferenca = agora - dataInicio;
+
+    const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+
+    document.getElementById("contador").innerHTML =
+        dias + " dias ❤️";
+}
+
+atualizarContador();
+setInterval(atualizarContador,1000);
+
+</script>
+
+</body>
+</html>
